@@ -1,0 +1,10 @@
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: orders3cx4-app-repo
+  namespace: test
+  labels:
+    argocd.argoproj.io/secret-type: repository
+stringData:
+  url: https://github.com/devhub-mad/orders3cx4-app-backend-gitops
