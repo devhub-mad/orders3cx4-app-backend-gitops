@@ -16,9 +16,7 @@ health:
   probeDelay: 5
   probePeriod: 10
   probeTimeout: 2
-env:
-  name: SPRING_PROFILES_ACTIVE
-  value: "development"
+env: []
 autoscaling:
   enabled: false
 namespace:
