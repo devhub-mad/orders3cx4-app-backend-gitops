@@ -40,10 +40,9 @@ spec:
         - name: http
           containerPort: {{ .Values.port }}
           protocol: TCP
-        {{- with .Values.env }}
         env:
-          {{- toYaml . | nindent 12 }}
-        {{- end }}
+          - name: SPRING_PROFILES_ACTIVE
+          value: "development"
         resources: {{ if not .Values.limits}}{}{{end}}
           {{- if .Values.limits }}
           limits:
