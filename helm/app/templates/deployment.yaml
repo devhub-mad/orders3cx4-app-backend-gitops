@@ -41,7 +41,7 @@ spec:
           containerPort: {{ .Values.port }}
           protocol: TCP
         env:
-          - name: SPRING_PROFILES_ACTIVE
+        - name: SPRING_PROFILES_ACTIVE
           value: "development"
         resources: {{ if not .Values.limits}}{}{{end}}
           {{- if .Values.limits }}
