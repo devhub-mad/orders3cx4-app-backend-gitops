@@ -43,6 +43,7 @@ spec:
           - '-DskipTests'
           - clean
           - package
+          - '-P kubernetes'
     runAfter:
       - fetch-repository
     taskRef:
