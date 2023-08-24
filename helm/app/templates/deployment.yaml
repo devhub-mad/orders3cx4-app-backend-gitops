@@ -31,7 +31,6 @@ spec:
         {{- include "quarkus-backend.selectorLabels" . | nindent 8 }}
     spec:
       terminationGracePeriodSeconds: {{ .Values.terminationGracePeriod | default 60 }}
-      serviceAccountName: {{ include "quarkus-backend.serviceAccountName" . }}
       containers:
       - name: {{ .Values.applicationName }}
         image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
